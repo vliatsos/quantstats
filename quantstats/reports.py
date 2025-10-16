@@ -192,6 +192,7 @@ def html(
 
     report.html(
         returns,
+        benchmark,
         rf=rf,
         compounded=compounded,
         periods_per_year=periods_per_year,
