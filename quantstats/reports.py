@@ -2640,7 +2640,8 @@ class HTMLReport:
             return _embed_figure(embed, self.figfmt)
 
     def _determine_benchmark_title(self, benchmark, kwargs):
-        if kwargs.get("benchmark_title") is None:
+        benchmark_title = kwargs.get("benchmark_title")
+        if benchmark_title is None:
             if isinstance(benchmark, str):
                 benchmark_title = benchmark
             elif isinstance(benchmark, _pd.Series):
